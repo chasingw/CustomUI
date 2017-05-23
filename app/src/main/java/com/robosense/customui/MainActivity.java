@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.robosense.customui.ui.activity.BottomNavigationActivity;
 import com.robosense.customui.ui.activity.CalculateActivity;
 import com.robosense.customui.ui.activity.ListActivity;
+import com.robosense.customui.ui.activity.TopbarActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -38,6 +39,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ListActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.btn_topbar).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TopbarActivity.class);
                 startActivity(intent);
             }
         });
