@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="30dp"
+              android:gravity="center"
+              android:paddingTop="5dp"
+              android:paddingBottom="5dp"
+              android:paddingLeft="12dp"
+              android:paddingRight="8dp"
+              android:layout_marginLeft="2dp"
+              android:layout_marginRight="2dp"
+              android:background="@drawable/shape_selected_btn"
+>
+    <TextView
+        android:id="@+id/tv_select_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="往昔强"
+        android:textColor="#000"
+        android:textSize="13sp"
+    />
+    <ImageView
+        android:id="@+id/iv_delete_select"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/delete"
+    />
+
+</LinearLayout>
