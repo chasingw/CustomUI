@@ -15,7 +15,7 @@ public class ScoreViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score_view);
-        scoreView = (LinearLayout) findViewById(R.id.score_View);
-        scoreView.addView(new ScoreView(this, 80));
+//        scoreView = (LinearLayout) findViewById(R.id.score_View);
+//        scoreView.addView(new ScoreView(this, 80));
     }
 }

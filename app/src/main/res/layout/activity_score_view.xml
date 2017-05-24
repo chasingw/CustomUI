@@ -8,4 +8,11 @@
     android:layout_height="match_parent"
     android:id="@+id/score_View"
     tools:context="com.robosense.customui.ui.activity.ScoreViewActivity">
+    <com.robosense.customui.widget.ScoreView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:scorenum="66"
+        app:scoreColor="@color/colorPrimaryDark"
+        app:scoreSize="44sp"
+    />
 </LinearLayout>

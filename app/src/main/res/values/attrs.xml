@@ -25,4 +25,10 @@
         <attr name="rightTextColor" format="reference|color"/>
         <attr name="rightTextBackground" format="reference|color"/>
     </declare-styleable>
+
+    <declare-styleable name="ScoreView">
+        <attr name="scorenum" format="integer"/>
+        <attr name="scoreColor" format="reference|color"/>
+        <attr name="scoreSize" format="dimension"/>
+    </declare-styleable>
 </resources>

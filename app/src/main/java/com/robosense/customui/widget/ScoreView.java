@@ -2,10 +2,13 @@ package com.robosense.customui.widget;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
+import android.support.annotation.Nullable;
+import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
@@ -22,12 +25,28 @@ public class ScoreView extends View{
     private float unitage;
     private Paint mPaintBlack;
     private Paint mPaintWhite;
+    private int mScoreColor;
+
     private RectF mRectF;
     private float arc_y = 0;
     private int score_text;
+    private float scoreTextSize;
 
     public ScoreView(Context context, int score) {
         super(context);
+        init(score);
+    }
+
+//    <attr name="scorenum" format="integer"/>
+//        <attr name="scoreColor" format="reference|color"/>
+//        <attr name="scoreSize" format="dimension"/>
+    public ScoreView(Context context, @Nullable AttributeSet attrs) {
+        super(context, attrs);
+        final TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ScoreView);
+        score = ta.getInt(R.styleable.ScoreView_scorenum, 0);
+        mScoreColor = ta.getColor(R.styleable.ScoreView_scoreColor, 0);
+        scoreTextSize = ta.getDimension(R.styleable.ScoreView_scoreSize, 0);
+        ta.recycle();
         init(score);
     }
 
@@ -59,10 +78,10 @@ public class ScoreView extends View{
         mPaintWhite.setDither(true);
 
         //设置文本的字号大小
-        mPaintWhite.setTextSize(unitage*6);
+        mPaintWhite.setTextSize(scoreTextSize);
         //设置文本的对齐方式为水平居中
         mPaintWhite.setTextAlign(Paint.Align.CENTER);
-        mPaintWhite.setColor(Color.WHITE);
+        mPaintWhite.setColor(mScoreColor);
 
         //初始化圆弧所需条件（以及设置圆弧的外接矩形的四边）
         mRectF = new RectF();
