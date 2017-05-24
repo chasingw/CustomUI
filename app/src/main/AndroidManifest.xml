@@ -26,6 +26,8 @@
         </activity>
         <activity android:name=".ui.activity.TopbarActivity">
         </activity>
+        <activity android:name=".ui.activity.ScoreViewActivity">
+        </activity>
     </application>
 
 </manifest>
