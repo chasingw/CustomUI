@@ -8,6 +8,8 @@
     tools:context="com.robosense.customui.ui.activity.TopbarActivity">
 
     <com.robosense.customui.widget.TopBar
+
+        android:id="@+id/topbar"
         android:layout_width="match_parent"
         app:title="主页"
         app:titleTextColor="@color/colorAccent"

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RelativeLayout;
@@ -15,23 +16,35 @@ import com.robosense.customui.R;
  * Created by maxwell on 17-5-23.
  */
 
-public class TopBar extends RelativeLayout{
+public class TopBar extends RelativeLayout {
 
-    private Button btnLeftText;
-    private Button btnRightText;
+    private Button   btnLeftText;
+    private Button   btnRightText;
     private TextView tvTitle;
 
     private String title;
-    private int titleColor;
-    private float titleTextSize;
+    private int    titleColor;
+    private float  titleTextSize;
 
     private String   leftText;
     private int      leftTextColor;
     private Drawable leftTextBackgroundColor;
 
-    private String rightText;
-    private int rightTextColor;
+    private String   rightText;
+    private int      rightTextColor;
     private Drawable rightTextBackgroundColor;
+
+    private onTopbarClickListener mOnTopbarClickListener;
+
+    public interface onTopbarClickListener {
+        void onLeftClick();
+
+        void onRightClick();
+    }
+
+    public void setOnTopbarClickListener(onTopbarClickListener listener) {
+        this.mOnTopbarClickListener = listener;
+    }
 
     public TopBar(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -82,5 +95,29 @@ public class TopBar extends RelativeLayout{
         addView(btnLeftText, leftlayoutParams);
         addView(btnRightText, rightlayoutParams);
 
+        initEvent();
+
+    }
+
+    private void initEvent() {
+        btnLeftText.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mOnTopbarClickListener != null) {
+
+                    mOnTopbarClickListener.onLeftClick();
+                }
+            }
+        });
+
+        btnRightText.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mOnTopbarClickListener != null) {
+
+                    mOnTopbarClickListener.onRightClick();
+                }
+            }
+        });
     }
 }
