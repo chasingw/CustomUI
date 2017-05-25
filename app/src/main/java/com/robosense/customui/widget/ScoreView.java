@@ -19,17 +19,17 @@ import com.robosense.customui.R;
  * Created by maxwell on 17-5-24.
  */
 
-public class ScoreView extends View{
+public class ScoreView extends View {
 
-    private int score;
+    private int   score;
     private float unitage;
     private Paint mPaintBlack;
     private Paint mPaintWhite;
-    private int mScoreColor;
+    private int   mScoreColor;
 
     private RectF mRectF;
     private float arc_y = 0;
-    private int score_text;
+    private int   score_text;
     private float scoreTextSize;
 
     public ScoreView(Context context, int score) {
@@ -37,7 +37,7 @@ public class ScoreView extends View{
         init(score);
     }
 
-//    <attr name="scorenum" format="integer"/>
+    //    <attr name="scorenum" format="integer"/>
 //        <attr name="scoreColor" format="reference|color"/>
 //        <attr name="scoreSize" format="dimension"/>
     public ScoreView(Context context, @Nullable AttributeSet attrs) {
@@ -68,13 +68,13 @@ public class ScoreView extends View{
         //设置画笔的风格为空心
         mPaintBlack.setStyle(Paint.Style.STROKE);
         //设置空心外框宽度为2dp
-        mPaintBlack.setStrokeWidth(unitage*0.2f);
+        mPaintBlack.setStrokeWidth(unitage * 0.2f);
 
         //初始白色笔
         mPaintWhite = new Paint();
         mPaintWhite.setAntiAlias(true);
         mPaintWhite.setStyle(Paint.Style.STROKE);
-        mPaintWhite.setStrokeWidth(unitage*0.2f);
+        mPaintWhite.setStrokeWidth(unitage * 0.2f);
         mPaintWhite.setDither(true);
 
         //设置文本的字号大小
@@ -85,9 +85,9 @@ public class ScoreView extends View{
 
         //初始化圆弧所需条件（以及设置圆弧的外接矩形的四边）
         mRectF = new RectF();
-        mRectF.set(unitage*0.5f, unitage*0.5f, unitage*18.5f, unitage*18.5f);
+        mRectF.set(unitage * 0.5f, unitage * 0.5f, unitage * 18.5f, unitage * 18.5f);
         //设置整个控件的宽高
-        setLayoutParams(new ViewGroup.LayoutParams((int)(unitage*19.5f), (int)(unitage*19.5f)));
+        setLayoutParams(new ViewGroup.LayoutParams((int) (unitage * 19.5f), (int) (unitage * 19.5f)));
 
         //获取该view的视图树观察者并添加绘制变化监听者
         this.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
@@ -100,10 +100,11 @@ public class ScoreView extends View{
         });
 
     }
+
     private class DrawThread implements Runnable {
         //2.开启子线程,并通过绘制监听实时更新绘制数据
         private final Thread mDrawThread;
-        private int statek;
+        private       int    statek;
         int count;
 
         public DrawThread() {
@@ -149,7 +150,8 @@ public class ScoreView extends View{
         canvas.drawArc(mRectF, 0, 360, false, mPaintBlack);
         canvas.drawArc(mRectF, -90, arc_y, false, mPaintWhite);
         //绘制文本
-        canvas.drawText(score_text+"", unitage*9.7f, unitage*11.0f, mPaintWhite);
+        canvas.drawText(score_text + "", unitage * 9.7f, unitage * 11.0f, mPaintWhite);
 
     }
 }
+
