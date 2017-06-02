@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleIndicatorView">
+        <attr name="indicator_radius" format="dimension"/>
+        <attr name="indicator_borderWidth" format="dimension"/>
+        <attr name="indicator_fillMode" format="integer"/>
+        <attr name="indicator_selectColor" format="color|reference"/>
+        <attr name="indicator_normalColor" format="color|reference"/>
+        <attr name="indicator_space" format="dimension"/>
+        <attr name="indicator_textColor" format="color|reference"/>
+    </declare-styleable>
+</resources>

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.robosense.customui">
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -28,6 +29,11 @@
         </activity>
         <activity android:name=".ui.activity.ScoreViewActivity">
         </activity>
+        <activity android:name=".ui.activity.IndicatorActivity">
+        </activity>
+        <activity android:name=".ui.activity.ConstraintActivity">
+        </activity>
+        <service android:name=".service.MyFloatService"></service>
     </application>
 
 </manifest>
