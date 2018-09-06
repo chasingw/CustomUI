@@ -1,1 +1,1 @@
-include ':app', ':indicatorview'
+include ':app', ':indicatorview', ':excleview', ':aligntextview'

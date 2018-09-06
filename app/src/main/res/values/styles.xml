@@ -7,5 +7,9 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/layer_live_rating_bar</item>
+        <item name="android:minHeight">64px</item>
+        <item name="android:maxHeight">64px</item>
+    </style>
 </resources>

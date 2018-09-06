@@ -31,21 +31,21 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:thumb="@mipmap/ic_launcher_round"
-        />
+    />
     <Button
         android:id="@+id/btn_customer_calculator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="自定义日历"
         android:layout_marginTop="8dp"
-        />
+        android:text="自定义日历"
+    />
 
     <Button
         android:id="@+id/btn_filter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="filter"
-        />
+    />
     <Button
         android:id="@+id/btn_topbar"
         android:layout_width="match_parent"
@@ -75,5 +75,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="floatService"
+    />
+    <com.robosense.aligntextview.CenterTextView
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        app:text="哈哈哈"
     />
 </LinearLayout>

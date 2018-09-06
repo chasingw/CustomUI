@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/maxwell/Projects/CustomUI/CustomUI/indicatorview/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8257683cebc0ae9d9c38439f9dd7c7f714074084">
+        <dex dex="/home/maxwell/Projects/CustomUI/CustomUI/app/build/intermediates/pre-dexed/debug/classes_0b51b6697d454443713ddd65b669378078f2368f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/maxwell/Projects/CustomUI/CustomUI/aligntextview/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0296e7570d545d220c11d62564ae913f92b98e34">
+        <dex dex="/home/maxwell/Projects/CustomUI/CustomUI/app/build/intermediates/pre-dexed/debug/classes_626fc57c6425d89191cf7385ae027f95dcfde3d7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/maxwell/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.2-4/3f5f1498bdbb9611cb1413f794b3a3a5a6edef34/kotlin-stdlib-1.1.2-4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3f5f1498bdbb9611cb1413f794b3a3a5a6edef34">
+        <dex dex="/home/maxwell/Projects/CustomUI/CustomUI/app/build/intermediates/pre-dexed/debug/kotlin-stdlib-1.1.2-4_b0d6e20f668fe9219d0ad7a11bf6ceebed5b3961.jar" />
+    </item>
+
+</items>
